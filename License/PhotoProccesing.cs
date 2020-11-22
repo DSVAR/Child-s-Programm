@@ -21,7 +21,7 @@ namespace License
 
         private int LSizeHeight = 879;
         private int LSizeWeight = 1283;
-       public void photo(string Name,string FullName,DateTime DateOfBrith,DateTime DateOfIssue,string Path)
+       public Bitmap photo(string Name,string FullName,DateTime DateOfBrith,DateTime DateOfIssue,string Path)
         {
             Photo = new Bitmap(Image.FromFile(Path));
             Photo =new Bitmap(Photo, new Size(SizeWeight, SizeHeight));
@@ -39,9 +39,7 @@ namespace License
             graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.White), 450, 550);
             graphics.DrawString(DateOfIssue.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.White), 900, 550);
 
-            Result.Save(Name+"_"+FullName+".Jpeg", ImageFormat.Jpeg);
-          
-
+            return Result;
         }
     }
 }

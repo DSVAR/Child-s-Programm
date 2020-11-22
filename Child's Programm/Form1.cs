@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using License;
+using Logical;
 
 namespace Child_s_Programm
 {
@@ -17,73 +19,108 @@ namespace Child_s_Programm
 
         private PhotoProccesing photo = new PhotoProccesing();
         private NumberForCar Number = new NumberForCar();
-          
+        private MakeNumber MN = new MakeNumber();
+
+        Bitmap SelectedFlag;
+
+        OpenFileDialog openFile;
         public Form1()
         {
             InitializeComponent();
+
+        }
             
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrEmpty(FirstName.Text) && !String.IsNullOrEmpty(FullName.Text))
-            {
-                OpenFileDialog openFile = new OpenFileDialog();
-
-                openFile.Filter = "Файлы изображения | *.bmp;*.png;*jpg;";
-                if (openFile.ShowDialog() == DialogResult.Cancel)
-                    return;
-                
-                if (openFile.FileName != null)
-                {
-                    photo.photo(FirstName.Text, FullName.Text,DateOfBrith.SelectionStart,DateOfIssue.TodayDate, openFile.FileName);
-                }
-
-            }
-            else
-                MessageBox.Show("Нельзя оставлять пустым имя и фамилию!");
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
 
         private void License_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            Bitmap dw = Properties.Resources.Права;
-            DateOfBrith.SelectionStart=Convert.ToDateTime("02.02.2013");
-            DateOfBrith.SelectionEnd= Convert.ToDateTime("02.02.2013");
-            comboBox2.Items.Add(dw);
+            Country.SelectedIndex = 0;
+            Fonts.SelectedIndex = 0;
+            DateOfBrith.SelectionStart = Convert.ToDateTime("02.02.2013");
+            DateOfBrith.SelectionEnd = Convert.ToDateTime("02.02.2013");
+
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Number.MakeNumbers("Area");
+            var sw = Convert.ToInt32(Weights.Text);
+
+            //   Number.MakeNumbers("Area");
+            MN.Numbers(Struct1.Text, Struct2.Text, Struck3.Text, Regions.Text, Country.Text, Fonts.Text,
+                SelectedFlag, Convert.ToInt32(Weights.Text), Convert.ToInt32(Heights.Text));
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (Country.SelectedIndex)
+            {
+                case 0:
+                    {
+                        SelectedFlag = Properties.Resources.flag_sRussia;
+                        Flag.Image = Properties.Resources.flag_sRussia;
+                        break;
+                    }
+                case 1:
+                    {
+                        SelectedFlag = Properties.Resources.ENG;
+                        Flag.Image = Properties.Resources.ENG;
+                        break;
+                    }
+                case 2:
+                    {
+                        SelectedFlag = Properties.Resources.brasil;
+                        Flag.Image = Properties.Resources.brasil;
+                        break;
+                    }
+            }
+
+        }
+
+        private void Font_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(FirstName.Text) && !String.IsNullOrEmpty(FullName.Text) && openFile.FileName != null)
+            {
+                    // photo.photo(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
+                    MN.MakeLicense(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
+            }
+            else
+                MessageBox.Show("Нельзя оставлять пустым имя, фамилию или фото!");
+
+           
+        }
+
+        private void Chage_photo_Click(object sender, EventArgs e)
+        {
+            openFile = new OpenFileDialog();
+
+
+            openFile.Filter = "Файлы изображения | *.bmp;*.png;*jpg;";
+            if (openFile.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            if (openFile.FileName != null)
+            {
+                pictureBox1.Image = Image.FromFile(openFile.FileName);
+            }
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }
