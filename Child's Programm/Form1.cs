@@ -5,17 +5,19 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using License;
 
 namespace Child_s_Programm
 {
     public partial class Form1 : Form
     {
-        Bitmap Photo;
-        Bitmap Licenses = Properties.Resources.license;
-        
-        
+
+        private PhotoProccesing photo = new PhotoProccesing();
+        private NumberForCar Number = new NumberForCar();
+          
         public Form1()
         {
             InitializeComponent();
@@ -24,33 +26,22 @@ namespace Child_s_Programm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Bitmap Result;
-    
-            OpenFileDialog openFile = new OpenFileDialog();
-            SaveFileDialog saveFile = new SaveFileDialog();
-            openFile.Filter = "Файлы изображения | *.bmp;*.png;*jpg;";
-            if (openFile.ShowDialog() == DialogResult.Cancel)
-                return;
-
-            if (openFile.FileName != null)
+            if (!String.IsNullOrEmpty(FirstName.Text) && !String.IsNullOrEmpty(FullName.Text))
             {
-            //    pictureBox2.Image = Image.FromFile(openFile.FileName);
-                Photo = new Bitmap(Image.FromFile(openFile.FileName));
-                //          Bitmap result = new Bitmap()
-                pictureBox2.Image = Photo;
-             //   Result = new Bitmap(Licenses, License.Width, License.Height);
-                Result = new Bitmap(License.Width,License.Height,System.Drawing.Imaging.PixelFormat.Format32bppArgb);
-                Graphics grap = Graphics.FromImage(Result);
-                grap.CompositingMode = System.Drawing.Drawing2D.CompositingMode.SourceOver;
+                OpenFileDialog openFile = new OpenFileDialog();
 
+                openFile.Filter = "Файлы изображения | *.bmp;*.png;*jpg;";
+                if (openFile.ShowDialog() == DialogResult.Cancel)
+                    return;
+                
+                if (openFile.FileName != null)
+                {
+                    photo.photo(FirstName.Text, FullName.Text,DateOfBrith.SelectionStart,DateOfIssue.TodayDate, openFile.FileName);
+                }
 
-                Photo = new Bitmap(Photo, new Size(300, 300));
-                grap.DrawImage(Licenses,0,0);
-                grap.DrawImage(Photo, (License.Width-Photo.Width) / 2, (License.Height-Photo.Height) / 2, Photo.Width, Photo.Height);
-                pictureBox1.Image = Result;
-
-                Result.Save("image.Jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
             }
+            else
+                MessageBox.Show("Нельзя оставлять пустым имя и фамилию!");
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -64,6 +55,35 @@ namespace Child_s_Programm
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Bitmap dw = Properties.Resources.Права;
+            DateOfBrith.SelectionStart=Convert.ToDateTime("02.02.2013");
+            DateOfBrith.SelectionEnd= Convert.ToDateTime("02.02.2013");
+            comboBox2.Items.Add(dw);
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Number.MakeNumbers("Area");
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
