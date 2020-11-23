@@ -20,6 +20,7 @@ namespace Child_s_Programm
         private PhotoProccesing photo = new PhotoProccesing();
         private NumberForCar Number = new NumberForCar();
         private MakeNumber MN = new MakeNumber();
+        private Picture_text PT = new Picture_text();
 
         Bitmap SelectedFlag;
 
@@ -48,9 +49,7 @@ namespace Child_s_Programm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var sw = float.Parse(Weights.Text);
-
-            //   Number.MakeNumbers("Area");
+            
             MN.Numbers(Struct1.Text, Struct2.Text, Struck3.Text, Regions.Text, Country.Text, Fonts.Text,
                 SelectedFlag, float.Parse(Weights.Text),float.Parse(Heights.Text),Struct1.ForeColor);
         }
@@ -115,25 +114,7 @@ namespace Child_s_Programm
 
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -150,6 +131,83 @@ namespace Child_s_Programm
                 Struck3.ForeColor = colorDialog1.Color;
             }
 
+        }
+
+        PictureBox[] PBCollection=new PictureBox[100];
+
+        int i = 0;
+        private bool Dragging;
+        private int xPos;
+        private int yPos;
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        void TMouseDown(object sender, MouseEventArgs e)
+        {
+            Dragging = true;
+            xPos = e.X;
+            yPos = e.Y;
+        }
+
+
+        void TMouseUp(object sender, MouseEventArgs e)
+        {
+            Dragging = false;
+        }
+        void TMouseMove(object sender, MouseEventArgs e)
+        {
+            Control c = sender as Control;
+            if (Dragging && c != null)
+            {
+                c.Top = e.Y + c.Top - yPos;
+                c.Left = e.X + c.Left - xPos;
+            }
+        }
+
+        void TMouse_click(object sender, MouseEventArgs e)
+        {
+            if(sender is PictureBox)
+            {
+                
+                if (e.Button == MouseButtons.Right)
+                {
+                   string er= ((PictureBox)sender).Name.Remove(0,2);
+                    int cost = Convert.ToInt32(er);
+                    PBCollection[cost].Dispose();
+                }
+            }
+           
+        }
+        
+
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Bitmap text=PT.Converts(TextF.Text,colorDialog1.Color,Fonts.Text,Convert.ToInt32(All.Text),Convert.ToInt32( Heigh.Text), Convert.ToInt32(All.Text));
+            pork(text);
+        }
+
+        void pork(Bitmap bitmap)
+        {
+            PictureBox PB = new PictureBox();
+            PB.BackColor = Color.Transparent;
+            PB.Image = bitmap;
+            PB.SizeMode = PictureBoxSizeMode.StretchImage;
+            PB.Size = new Size(Convert.ToInt32(All.Text), Convert.ToInt32(Heigh.Text));
+            
+            PB.Name = "PB" + i.ToString();
+
+            PB.MouseDown += new MouseEventHandler(TMouseDown);
+            PB.MouseUp += new MouseEventHandler(TMouseUp);
+            PB.MouseMove += new MouseEventHandler(TMouseMove);
+            PB.MouseClick += new MouseEventHandler(TMouse_click);
+
+            panel1.Controls.Add(PB);
+            PBCollection[i] = PB;
+            i++;
         }
     }
 }
