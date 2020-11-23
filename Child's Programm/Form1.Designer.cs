@@ -38,33 +38,33 @@ namespace Child_s_Programm
             this.FirstName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.FullName = new System.Windows.Forms.TextBox();
-            this.Numbers = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Fonts = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Weights = new System.Windows.Forms.TextBox();
-            this.Heights = new System.Windows.Forms.TextBox();
-            this.Flag = new System.Windows.Forms.PictureBox();
-            this.Country = new System.Windows.Forms.ComboBox();
-            this.Regions = new System.Windows.Forms.TextBox();
-            this.Struck3 = new System.Windows.Forms.TextBox();
-            this.Struct2 = new System.Windows.Forms.TextBox();
-            this.Struct1 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Struct1 = new System.Windows.Forms.TextBox();
+            this.Struct2 = new System.Windows.Forms.TextBox();
+            this.Struck3 = new System.Windows.Forms.TextBox();
+            this.Regions = new System.Windows.Forms.TextBox();
+            this.Country = new System.Windows.Forms.ComboBox();
+            this.Flag = new System.Windows.Forms.PictureBox();
+            this.Heights = new System.Windows.Forms.TextBox();
+            this.Weights = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Fonts = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.Numbers = new System.Windows.Forms.TabPage();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.License.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.Numbers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Flag)).BeginInit();
+            this.Numbers.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -152,100 +152,67 @@ namespace Child_s_Programm
             this.FullName.Size = new System.Drawing.Size(222, 20);
             this.FullName.TabIndex = 0;
             // 
-            // Numbers
+            // button2
             // 
-            this.Numbers.Controls.Add(this.label8);
-            this.Numbers.Controls.Add(this.label9);
-            this.Numbers.Controls.Add(this.label7);
-            this.Numbers.Controls.Add(this.label6);
-            this.Numbers.Controls.Add(this.label5);
-            this.Numbers.Controls.Add(this.label4);
-            this.Numbers.Controls.Add(this.label3);
-            this.Numbers.Controls.Add(this.Fonts);
-            this.Numbers.Controls.Add(this.label2);
-            this.Numbers.Controls.Add(this.label1);
-            this.Numbers.Controls.Add(this.Weights);
-            this.Numbers.Controls.Add(this.Heights);
-            this.Numbers.Controls.Add(this.Flag);
-            this.Numbers.Controls.Add(this.Country);
-            this.Numbers.Controls.Add(this.Regions);
-            this.Numbers.Controls.Add(this.Struck3);
-            this.Numbers.Controls.Add(this.Struct2);
-            this.Numbers.Controls.Add(this.Struct1);
-            this.Numbers.Controls.Add(this.pictureBox2);
-            this.Numbers.Controls.Add(this.button2);
-            this.Numbers.Location = new System.Drawing.Point(4, 22);
-            this.Numbers.Name = "Numbers";
-            this.Numbers.Padding = new System.Windows.Forms.Padding(3);
-            this.Numbers.Size = new System.Drawing.Size(609, 410);
-            this.Numbers.TabIndex = 1;
-            this.Numbers.Text = "Номера";
-            this.Numbers.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(424, 376);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Печать";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label3
+            // pictureBox2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Стиль:";
+            this.pictureBox2.Image = global::Child_s_Programm.Properties.Resources.Numbers;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 30);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(455, 88);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
-            // Fonts
+            // Struct1
             // 
-            this.Fonts.FormattingEnabled = true;
-            this.Fonts.Items.AddRange(new object[] {
-            "Times New Roman",
-            "Calibri",
-            "Arial"});
-            this.Fonts.Location = new System.Drawing.Point(74, 145);
-            this.Fonts.Name = "Fonts";
-            this.Fonts.Size = new System.Drawing.Size(121, 21);
-            this.Fonts.TabIndex = 12;
-            this.Fonts.SelectedIndexChanged += new System.EventHandler(this.Font_SelectedIndexChanged);
+            this.Struct1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Struct1.Location = new System.Drawing.Point(26, 50);
+            this.Struct1.Name = "Struct1";
+            this.Struct1.Size = new System.Drawing.Size(77, 44);
+            this.Struct1.TabIndex = 2;
+            this.Struct1.Text = "AA";
+            this.Struct1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label2
+            // Struct2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 232);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Ширина";
+            this.Struct2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Struct2.Location = new System.Drawing.Point(109, 50);
+            this.Struct2.Name = "Struct2";
+            this.Struct2.Size = new System.Drawing.Size(125, 44);
+            this.Struct2.TabIndex = 3;
+            this.Struct2.Text = "588";
+            this.Struct2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // Struck3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 185);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Высота";
+            this.Struck3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Struck3.Location = new System.Drawing.Point(240, 50);
+            this.Struck3.Name = "Struck3";
+            this.Struck3.Size = new System.Drawing.Size(77, 44);
+            this.Struck3.TabIndex = 4;
+            this.Struck3.Text = "ED";
+            this.Struck3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Weights
+            // Regions
             // 
-            this.Weights.Location = new System.Drawing.Point(78, 229);
-            this.Weights.Name = "Weights";
-            this.Weights.Size = new System.Drawing.Size(49, 20);
-            this.Weights.TabIndex = 9;
-            this.Weights.Text = "2";
-            // 
-            // Heights
-            // 
-            this.Heights.Location = new System.Drawing.Point(78, 182);
-            this.Heights.Name = "Heights";
-            this.Heights.Size = new System.Drawing.Size(49, 20);
-            this.Heights.TabIndex = 8;
-            this.Heights.Text = "5";
-            // 
-            // Flag
-            // 
-            this.Flag.Location = new System.Drawing.Point(403, 85);
-            this.Flag.Name = "Flag";
-            this.Flag.Size = new System.Drawing.Size(44, 21);
-            this.Flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Flag.TabIndex = 7;
-            this.Flag.TabStop = false;
+            this.Regions.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Regions.Location = new System.Drawing.Point(355, 38);
+            this.Regions.Multiline = true;
+            this.Regions.Name = "Regions";
+            this.Regions.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Regions.Size = new System.Drawing.Size(77, 38);
+            this.Regions.TabIndex = 5;
+            this.Regions.Text = "76";
+            this.Regions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Country
             // 
@@ -261,67 +228,70 @@ namespace Child_s_Programm
             this.Country.TabIndex = 6;
             this.Country.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // Regions
+            // Flag
             // 
-            this.Regions.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Regions.Location = new System.Drawing.Point(355, 38);
-            this.Regions.Multiline = true;
-            this.Regions.Name = "Regions";
-            this.Regions.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Regions.Size = new System.Drawing.Size(77, 38);
-            this.Regions.TabIndex = 5;
-            this.Regions.Text = "76";
-            this.Regions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Flag.Location = new System.Drawing.Point(403, 85);
+            this.Flag.Name = "Flag";
+            this.Flag.Size = new System.Drawing.Size(44, 21);
+            this.Flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Flag.TabIndex = 7;
+            this.Flag.TabStop = false;
             // 
-            // Struck3
+            // Heights
             // 
-            this.Struck3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Struck3.Location = new System.Drawing.Point(240, 50);
-            this.Struck3.Name = "Struck3";
-            this.Struck3.Size = new System.Drawing.Size(77, 44);
-            this.Struck3.TabIndex = 4;
-            this.Struck3.Text = "ED";
-            this.Struck3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Heights.Location = new System.Drawing.Point(78, 182);
+            this.Heights.Name = "Heights";
+            this.Heights.Size = new System.Drawing.Size(49, 20);
+            this.Heights.TabIndex = 8;
+            this.Heights.Text = "2";
             // 
-            // Struct2
+            // Weights
             // 
-            this.Struct2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Struct2.Location = new System.Drawing.Point(109, 50);
-            this.Struct2.Name = "Struct2";
-            this.Struct2.Size = new System.Drawing.Size(125, 44);
-            this.Struct2.TabIndex = 3;
-            this.Struct2.Text = "588";
-            this.Struct2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Weights.Location = new System.Drawing.Point(78, 229);
+            this.Weights.Name = "Weights";
+            this.Weights.Size = new System.Drawing.Size(49, 20);
+            this.Weights.TabIndex = 9;
+            this.Weights.Text = "5";
             // 
-            // Struct1
+            // label1
             // 
-            this.Struct1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Struct1.Location = new System.Drawing.Point(26, 50);
-            this.Struct1.Name = "Struct1";
-            this.Struct1.Size = new System.Drawing.Size(77, 44);
-            this.Struct1.TabIndex = 2;
-            this.Struct1.Text = "AA";
-            this.Struct1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 185);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Высота";
             // 
-            // pictureBox2
+            // label2
             // 
-            this.pictureBox2.Image = global::Child_s_Programm.Properties.Resources.Numbers;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 30);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(455, 88);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 232);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Ширина";
             // 
-            // button2
+            // Fonts
             // 
-            this.button2.Location = new System.Drawing.Point(424, 376);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Печать";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Fonts.FormattingEnabled = true;
+            this.Fonts.Items.AddRange(new object[] {
+            "Times New Roman",
+            "Calibri",
+            "Arial"});
+            this.Fonts.Location = new System.Drawing.Point(74, 145);
+            this.Fonts.Name = "Fonts";
+            this.Fonts.Size = new System.Drawing.Size(121, 21);
+            this.Fonts.TabIndex = 12;
+            this.Fonts.SelectedIndexChanged += new System.EventHandler(this.Font_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Стиль:";
             // 
             // label4
             // 
@@ -357,31 +327,48 @@ namespace Child_s_Programm
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(29, 287);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 13);
+            this.label7.Size = new System.Drawing.Size(93, 13);
             this.label7.TabIndex = 17;
-            this.label7.Text = "Без запятых!";
+            this.label7.Text = "Только запятые!";
             // 
-            // label8
+            // Numbers
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 313);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Без точек!";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.Numbers.Controls.Add(this.button3);
+            this.Numbers.Controls.Add(this.label7);
+            this.Numbers.Controls.Add(this.label6);
+            this.Numbers.Controls.Add(this.label5);
+            this.Numbers.Controls.Add(this.label4);
+            this.Numbers.Controls.Add(this.label3);
+            this.Numbers.Controls.Add(this.Fonts);
+            this.Numbers.Controls.Add(this.label2);
+            this.Numbers.Controls.Add(this.label1);
+            this.Numbers.Controls.Add(this.Weights);
+            this.Numbers.Controls.Add(this.Heights);
+            this.Numbers.Controls.Add(this.Flag);
+            this.Numbers.Controls.Add(this.Country);
+            this.Numbers.Controls.Add(this.Regions);
+            this.Numbers.Controls.Add(this.Struck3);
+            this.Numbers.Controls.Add(this.Struct2);
+            this.Numbers.Controls.Add(this.Struct1);
+            this.Numbers.Controls.Add(this.pictureBox2);
+            this.Numbers.Controls.Add(this.button2);
+            this.Numbers.Location = new System.Drawing.Point(4, 22);
+            this.Numbers.Name = "Numbers";
+            this.Numbers.Padding = new System.Windows.Forms.Padding(3);
+            this.Numbers.Size = new System.Drawing.Size(609, 410);
+            this.Numbers.TabIndex = 1;
+            this.Numbers.Text = "Номера";
+            this.Numbers.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // button3
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(14, 313);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(15, 20);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "*";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.button3.Location = new System.Drawing.Point(277, 143);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(110, 23);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Изменить цвет";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
@@ -389,17 +376,19 @@ namespace Child_s_Programm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 443);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.License.ResumeLayout(false);
             this.License.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Flag)).EndInit();
             this.Numbers.ResumeLayout(false);
             this.Numbers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -410,32 +399,32 @@ namespace Child_s_Programm
         private System.Windows.Forms.TabPage License;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox FullName;
-        private System.Windows.Forms.TabPage Numbers;
         private System.Windows.Forms.TextBox FirstName;
         private System.Windows.Forms.MonthCalendar DateOfIssue;
         private System.Windows.Forms.MonthCalendar DateOfBrith;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Chage_photo;
+        private System.Windows.Forms.TabPage Numbers;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox Fonts;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Weights;
+        private System.Windows.Forms.TextBox Heights;
+        private System.Windows.Forms.PictureBox Flag;
         private System.Windows.Forms.ComboBox Country;
         private System.Windows.Forms.TextBox Regions;
         private System.Windows.Forms.TextBox Struck3;
         private System.Windows.Forms.TextBox Struct2;
         private System.Windows.Forms.TextBox Struct1;
-        private System.Windows.Forms.PictureBox Flag;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Weights;
-        private System.Windows.Forms.TextBox Heights;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox Fonts;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button Chage_photo;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 

@@ -48,11 +48,11 @@ namespace Child_s_Programm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var sw = Convert.ToInt32(Weights.Text);
+            var sw = float.Parse(Weights.Text);
 
             //   Number.MakeNumbers("Area");
             MN.Numbers(Struct1.Text, Struct2.Text, Struck3.Text, Regions.Text, Country.Text, Fonts.Text,
-                SelectedFlag, Convert.ToInt32(Weights.Text), Convert.ToInt32(Heights.Text));
+                SelectedFlag, float.Parse(Weights.Text),float.Parse(Heights.Text),Struct1.ForeColor);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -122,6 +122,33 @@ namespace Child_s_Programm
 
         private void label9_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            colorDialog1.AllowFullOpen = false;
+            colorDialog1.ShowHelp = true;
+
+            colorDialog1.Color = Struct1.ForeColor;
+
+            // Update the text box color if the user clicks OK 
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            { 
+                Struct1.ForeColor = colorDialog1.Color;
+                Struct2.ForeColor = colorDialog1.Color;
+                Struck3.ForeColor = colorDialog1.Color;
+            }
 
         }
     }
