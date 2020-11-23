@@ -39,6 +39,17 @@ namespace Child_s_Programm
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.FullName = new System.Windows.Forms.TextBox();
             this.Numbers = new System.Windows.Forms.TabPage();
+            this.SizeOfText = new System.Windows.Forms.DomainUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.TextF = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.All = new System.Windows.Forms.DomainUpDown();
+            this.Heigh = new System.Windows.Forms.DomainUpDown();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,21 +65,9 @@ namespace Child_s_Programm
             this.Flag = new System.Windows.Forms.PictureBox();
             this.Country = new System.Windows.Forms.ComboBox();
             this.Regions = new System.Windows.Forms.TextBox();
-            this.Struck3 = new System.Windows.Forms.TextBox();
-            this.Struct2 = new System.Windows.Forms.TextBox();
-            this.Struct1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Heigh = new System.Windows.Forms.DomainUpDown();
-            this.All = new System.Windows.Forms.DomainUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.TextF = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.License.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -164,6 +163,8 @@ namespace Child_s_Programm
             // 
             // Numbers
             // 
+            this.Numbers.Controls.Add(this.SizeOfText);
+            this.Numbers.Controls.Add(this.label12);
             this.Numbers.Controls.Add(this.label11);
             this.Numbers.Controls.Add(this.TextF);
             this.Numbers.Controls.Add(this.button5);
@@ -188,9 +189,6 @@ namespace Child_s_Programm
             this.Numbers.Controls.Add(this.Flag);
             this.Numbers.Controls.Add(this.Country);
             this.Numbers.Controls.Add(this.Regions);
-            this.Numbers.Controls.Add(this.Struck3);
-            this.Numbers.Controls.Add(this.Struct2);
-            this.Numbers.Controls.Add(this.Struct1);
             this.Numbers.Controls.Add(this.pictureBox2);
             this.Numbers.Controls.Add(this.button2);
             this.Numbers.Location = new System.Drawing.Point(4, 22);
@@ -200,6 +198,129 @@ namespace Child_s_Programm
             this.Numbers.TabIndex = 1;
             this.Numbers.Text = "Номера";
             this.Numbers.UseVisualStyleBackColor = true;
+            // 
+            // SizeOfText
+            // 
+            this.SizeOfText.Items.Add("25");
+            this.SizeOfText.Items.Add("30");
+            this.SizeOfText.Items.Add("40");
+            this.SizeOfText.Items.Add("50");
+            this.SizeOfText.Items.Add("60");
+            this.SizeOfText.Items.Add("70");
+            this.SizeOfText.Items.Add("80");
+            this.SizeOfText.Items.Add("90");
+            this.SizeOfText.Items.Add("100");
+            this.SizeOfText.Location = new System.Drawing.Point(476, 340);
+            this.SizeOfText.Name = "SizeOfText";
+            this.SizeOfText.Size = new System.Drawing.Size(47, 20);
+            this.SizeOfText.TabIndex = 30;
+            this.SizeOfText.Text = "140";
+            this.SizeOfText.SelectedItemChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(465, 321);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(72, 13);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Размер букв";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(284, 199);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(37, 13);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Текст";
+            // 
+            // TextF
+            // 
+            this.TextF.Location = new System.Drawing.Point(272, 217);
+            this.TextF.Multiline = true;
+            this.TextF.Name = "TextF";
+            this.TextF.Size = new System.Drawing.Size(135, 28);
+            this.TextF.TabIndex = 27;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(281, 257);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(110, 23);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "Добавить текст";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 193);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Печать:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(473, 261);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Ширина";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(473, 206);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 13);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Высота";
+            // 
+            // All
+            // 
+            this.All.Items.Add("25");
+            this.All.Items.Add("30");
+            this.All.Items.Add("40");
+            this.All.Items.Add("50");
+            this.All.Items.Add("60");
+            this.All.Items.Add("70");
+            this.All.Items.Add("80");
+            this.All.Items.Add("90");
+            this.All.Items.Add("100");
+            this.All.Location = new System.Drawing.Point(476, 280);
+            this.All.Name = "All";
+            this.All.Size = new System.Drawing.Size(47, 20);
+            this.All.TabIndex = 22;
+            this.All.Text = "140";
+            // 
+            // Heigh
+            // 
+            this.Heigh.Items.Add("25");
+            this.Heigh.Items.Add("30");
+            this.Heigh.Items.Add("40");
+            this.Heigh.Items.Add("50");
+            this.Heigh.Items.Add("60");
+            this.Heigh.Items.Add("70");
+            this.Heigh.Items.Add("80");
+            this.Heigh.Items.Add("90");
+            this.Heigh.Items.Add("100");
+            this.Heigh.Location = new System.Drawing.Point(476, 225);
+            this.Heigh.Name = "Heigh";
+            this.Heigh.Size = new System.Drawing.Size(38, 20);
+            this.Heigh.TabIndex = 21;
+            this.Heigh.Text = "140";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(28, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(313, 119);
+            this.panel1.TabIndex = 20;
             // 
             // button4
             // 
@@ -317,6 +438,7 @@ namespace Child_s_Programm
             // 
             // Flag
             // 
+            this.Flag.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Flag.Location = new System.Drawing.Point(437, 124);
             this.Flag.Name = "Flag";
             this.Flag.Size = new System.Drawing.Size(44, 21);
@@ -350,36 +472,6 @@ namespace Child_s_Programm
             this.Regions.Text = "76";
             this.Regions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Struck3
-            // 
-            this.Struck3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Struck3.Location = new System.Drawing.Point(240, 50);
-            this.Struck3.Name = "Struck3";
-            this.Struck3.Size = new System.Drawing.Size(77, 44);
-            this.Struck3.TabIndex = 4;
-            this.Struck3.Text = "ED";
-            this.Struck3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Struct2
-            // 
-            this.Struct2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Struct2.Location = new System.Drawing.Point(109, 50);
-            this.Struct2.Name = "Struct2";
-            this.Struct2.Size = new System.Drawing.Size(125, 44);
-            this.Struct2.TabIndex = 3;
-            this.Struct2.Text = "588";
-            this.Struct2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Struct1
-            // 
-            this.Struct1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Struct1.Location = new System.Drawing.Point(26, 50);
-            this.Struct1.Name = "Struct1";
-            this.Struct1.Size = new System.Drawing.Size(77, 44);
-            this.Struct1.TabIndex = 2;
-            this.Struct1.Text = "AA";
-            this.Struct1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Child_s_Programm.Properties.Resources.Numbers;
@@ -399,101 +491,6 @@ namespace Child_s_Programm
             this.button2.Text = "Печать";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(26, 39);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(313, 119);
-            this.panel1.TabIndex = 20;
-            // 
-            // Heigh
-            // 
-            this.Heigh.Items.Add("25");
-            this.Heigh.Items.Add("30");
-            this.Heigh.Items.Add("40");
-            this.Heigh.Items.Add("50");
-            this.Heigh.Items.Add("60");
-            this.Heigh.Items.Add("70");
-            this.Heigh.Items.Add("80");
-            this.Heigh.Items.Add("90");
-            this.Heigh.Items.Add("100");
-            this.Heigh.Location = new System.Drawing.Point(476, 225);
-            this.Heigh.Name = "Heigh";
-            this.Heigh.Size = new System.Drawing.Size(38, 20);
-            this.Heigh.TabIndex = 21;
-            this.Heigh.Text = "140";
-            // 
-            // All
-            // 
-            this.All.Items.Add("25");
-            this.All.Items.Add("30");
-            this.All.Items.Add("40");
-            this.All.Items.Add("50");
-            this.All.Items.Add("60");
-            this.All.Items.Add("70");
-            this.All.Items.Add("80");
-            this.All.Items.Add("90");
-            this.All.Items.Add("100");
-            this.All.Location = new System.Drawing.Point(476, 280);
-            this.All.Name = "All";
-            this.All.Size = new System.Drawing.Size(47, 20);
-            this.All.TabIndex = 22;
-            this.All.Text = "140";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(473, 206);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 13);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Высота";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(473, 261);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Ширина";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 193);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Печать:";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(281, 257);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(110, 23);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "Добавить текст";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // TextF
-            // 
-            this.TextF.Location = new System.Drawing.Point(272, 217);
-            this.TextF.Multiline = true;
-            this.TextF.Name = "TextF";
-            this.TextF.Size = new System.Drawing.Size(135, 28);
-            this.TextF.TabIndex = 27;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(284, 199);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 13);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Текст";
             // 
             // Form1
             // 
@@ -543,9 +540,6 @@ namespace Child_s_Programm
         private System.Windows.Forms.PictureBox Flag;
         private System.Windows.Forms.ComboBox Country;
         private System.Windows.Forms.TextBox Regions;
-        private System.Windows.Forms.TextBox Struck3;
-        private System.Windows.Forms.TextBox Struct2;
-        private System.Windows.Forms.TextBox Struct1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -560,6 +554,8 @@ namespace Child_s_Programm
         private System.Windows.Forms.DomainUpDown All;
         private System.Windows.Forms.DomainUpDown Heigh;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DomainUpDown SizeOfText;
+        private System.Windows.Forms.Label label12;
     }
 }
 

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPictureBox.cs" />
     <Compile Include="MakeNumber.cs" />
     <Compile Include="Picture_text.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
@@ -21,9 +22,10 @@ namespace Child_s_Programm
         private NumberForCar Number = new NumberForCar();
         private MakeNumber MN = new MakeNumber();
         private Picture_text PT = new Picture_text();
+        private AddPictureBox APB = new AddPictureBox();
 
         Bitmap SelectedFlag;
-
+        Bitmap Picture;
         OpenFileDialog openFile;
         public Form1()
         {
@@ -49,9 +51,20 @@ namespace Child_s_Programm
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            //MN.Numbers(Struct1.Text, Struct2.Text, Struck3.Text, Regions.Text, Country.Text, Fonts.Text,
+            //    SelectedFlag, float.Parse(Weights.Text),float.Parse(Heights.Text),Struct1.ForeColor);
+
+            Size Sizes = License.Size-new Size(100,230);
             
-            MN.Numbers(Struct1.Text, Struct2.Text, Struck3.Text, Regions.Text, Country.Text, Fonts.Text,
-                SelectedFlag, float.Parse(Weights.Text),float.Parse(Heights.Text),Struct1.ForeColor);
+
+            var bitmap = new Bitmap(Sizes.Width, Sizes.Height);
+           
+            Graphics g = Graphics.FromImage(bitmap);
+            g.CopyFromScreen(License.PointToScreen(Point.Empty), Point.Empty, Sizes);
+            bitmap.Save("lulu.png", ImageFormat.Png);
+
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,96 +131,40 @@ namespace Child_s_Programm
 
         private void button3_Click(object sender, EventArgs e)
         {
-            colorDialog1.AllowFullOpen = false;
-            colorDialog1.ShowHelp = true;
-
-            colorDialog1.Color = Struct1.ForeColor;
-
-            // Update the text box color if the user clicks OK 
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            { 
-                Struct1.ForeColor = colorDialog1.Color;
-                Struct2.ForeColor = colorDialog1.Color;
-                Struck3.ForeColor = colorDialog1.Color;
-            }
+        
 
         }
 
-        PictureBox[] PBCollection=new PictureBox[100];
-
-        int i = 0;
-        private bool Dragging;
-        private int xPos;
-        private int yPos;
 
         private void button4_Click(object sender, EventArgs e)
         {
-          
-        }
-
-        void TMouseDown(object sender, MouseEventArgs e)
-        {
-            Dragging = true;
-            xPos = e.X;
-            yPos = e.Y;
-        }
+            
+                openFile = new OpenFileDialog();
 
 
-        void TMouseUp(object sender, MouseEventArgs e)
-        {
-            Dragging = false;
-        }
-        void TMouseMove(object sender, MouseEventArgs e)
-        {
-            Control c = sender as Control;
-            if (Dragging && c != null)
+            openFile.Filter = "Файлы изображения | *.bmp;*.png;*jpg;";
+            if (openFile.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            if (openFile.FileName != null)
             {
-                c.Top = e.Y + c.Top - yPos;
-                c.Left = e.X + c.Left - xPos;
+                Picture = (Bitmap)Image.FromFile(openFile.FileName);
+                APB.AddPB(Picture, panel1, Convert.ToInt32(All.Text), Convert.ToInt32(Heigh.Text));
             }
         }
-
-        void TMouse_click(object sender, MouseEventArgs e)
-        {
-            if(sender is PictureBox)
-            {
-                
-                if (e.Button == MouseButtons.Right)
-                {
-                   string er= ((PictureBox)sender).Name.Remove(0,2);
-                    int cost = Convert.ToInt32(er);
-                    PBCollection[cost].Dispose();
-                }
-            }
-           
-        }
-        
 
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            Bitmap text=PT.Converts(TextF.Text,colorDialog1.Color,Fonts.Text,Convert.ToInt32(All.Text),Convert.ToInt32( Heigh.Text), Convert.ToInt32(All.Text));
-            pork(text);
+            Bitmap text=PT.Converts(TextF.Text,colorDialog1.Color,Fonts.Text,Convert.ToInt32(SizeOfText.Text),Convert.ToInt32(Heigh.Text), Convert.ToInt32(All.Text));
+            //            pork(text);
+            APB.AddPB(text, panel1, Convert.ToInt32(All.Text), Convert.ToInt32(Heigh.Text));
         }
 
-        void pork(Bitmap bitmap)
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
         {
-            PictureBox PB = new PictureBox();
-            PB.BackColor = Color.Transparent;
-            PB.Image = bitmap;
-            PB.SizeMode = PictureBoxSizeMode.StretchImage;
-            PB.Size = new Size(Convert.ToInt32(All.Text), Convert.ToInt32(Heigh.Text));
-            
-            PB.Name = "PB" + i.ToString();
 
-            PB.MouseDown += new MouseEventHandler(TMouseDown);
-            PB.MouseUp += new MouseEventHandler(TMouseUp);
-            PB.MouseMove += new MouseEventHandler(TMouseMove);
-            PB.MouseClick += new MouseEventHandler(TMouse_click);
-
-            panel1.Controls.Add(PB);
-            PBCollection[i] = PB;
-            i++;
         }
     }
 }

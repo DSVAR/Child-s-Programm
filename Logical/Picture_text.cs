@@ -11,8 +11,7 @@ namespace Logical
 {
     public class Picture_text
     {
-        private int ThemeHeight = 300;
-        private int ThemeWeight = 400;
+       
         Bitmap theme=Properties.Resources._null;
         public Bitmap Converts(string text,Color ColorText,string Font,int size,int heigh,int weigh)
         {
@@ -23,9 +22,10 @@ namespace Logical
             result.MakeTransparent(Color.White);
             
             Graphics grap = Graphics.FromImage(result);
-            grap.CompositingMode = CompositingMode.SourceCopy;
+            grap.CompositingMode = CompositingMode.SourceOver;
             grap.DrawImage(theme, 0, 0);
-            grap.DrawString(text, new Font(Font, size, FontStyle.Bold), new SolidBrush(ColorText), 0, 0);
+            grap.DrawString(text, new Font(Font, size, FontStyle.Bold), new SolidBrush(ColorText),0,0);
+            
             result.MakeTransparent(Color.White);
             result.Save("Imp.png", ImageFormat.Png);
             return result;
