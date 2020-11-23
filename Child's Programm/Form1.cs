@@ -53,7 +53,7 @@ namespace Child_s_Programm
         {
 
             //MN.Numbers(Struct1.Text, Struct2.Text, Struck3.Text, Regions.Text, Country.Text, Fonts.Text,
-            //    SelectedFlag, float.Parse(Weights.Text),float.Parse(Heights.Text),Struct1.ForeColor);
+            //    SelectedFlag, float.Parse(Weights.Text), float.Parse(Heights.Text), Struct1.ForeColor);
 
             Size Sizes = License.Size-new Size(100,230);
             
@@ -62,7 +62,9 @@ namespace Child_s_Programm
            
             Graphics g = Graphics.FromImage(bitmap);
             g.CopyFromScreen(License.PointToScreen(Point.Empty), Point.Empty, Sizes);
-            bitmap.Save("lulu.png", ImageFormat.Png);
+            // bitmap.Save("lulu.png", ImageFormat.Png);
+            MN.JustPrint(bitmap, float.Parse(Weights.Text), float.Parse(Heights.Text));
+          //  MN.Just_Print(bitmap, 300f, 300f);
 
 
         }

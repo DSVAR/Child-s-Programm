@@ -73,7 +73,26 @@ namespace Logical
         }
 
       
+        public void JustPrint(Bitmap printer, float weight, float height)
+        {
+            PathFolder = Environment.CurrentDirectory;
+            PathFolder += @"\HistoryNumbers";
 
+            print = printer;
+
+            if (Directory.Exists(PathFolder))
+            {
+                print.Save(PathFolder + "\\" +"LastNumber"+ ".png", ImageFormat.Png);
+            }
+            else
+            {
+                Directory.CreateDirectory(PathFolder);
+                print.Save(PathFolder + "\\" + "LastNumber" + ".png", ImageFormat.Png);
+            }
+            print = new Bitmap(print, new Size(PixelWeightInSM(weight), PixelHeighInSM(height)));
+            Printer();
+
+        }
         void Printer()
         {
           
