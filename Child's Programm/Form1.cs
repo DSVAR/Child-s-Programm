@@ -103,13 +103,13 @@ namespace Child_s_Programm
             var gort = Convert.ToDateTime(Birh.Text);
             //
             MN.MakeLicense(FirstName.Text, FullName.Text, Convert.ToDateTime(Birh.Text), gort, Series.Text, Areas.Text, openFile.FileName);
-            if (!String.IsNullOrEmpty(FirstName.Text) && !String.IsNullOrEmpty(FullName.Text) && openFile.FileName != null)
-            {
-                    // photo.photo(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
-                  //  MN.MakeLicense(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
-            }
-            else
-                MessageBox.Show("Все поля должны быть заполнены!");
+            //if (!String.IsNullOrEmpty(FirstName.Text) && !String.IsNullOrEmpty(FullName.Text) && openFile.FileName != null)
+            //{
+            //        // photo.photo(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
+            //      //  MN.MakeLicense(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
+            //}
+            //else
+            //    MessageBox.Show("Все поля должны быть заполнены!");
 
            
         }
