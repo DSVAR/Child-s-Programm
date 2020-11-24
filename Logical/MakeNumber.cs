@@ -25,51 +25,29 @@ namespace Logical
         private float MaxPixelHeight = 1125.63f;
 
         string PathFolder;
-        
 
-        public void Numbers(string strunc1,string struck2,string struck3, string region,string country,
-            string font,Bitmap flag, float weight,float height,Color color)
-        {
-            PathFolder = Environment.CurrentDirectory;
-            PathFolder +=@"\HistoryNumbers";
-            int margin=1000;
-            print = NFC.MakeNumbers(strunc1, struck2, struck3, region, country, font, flag,margin,color);
-          //  print.Save(strunc1 + struck2 + struck3 + "_" + region + ".png", ImageFormat.Png);
 
-            if (Directory.Exists(PathFolder))
-            {
-                print.Save(PathFolder + "\\"+ strunc1 + struck2 + struck3 + "_" + region + ".png", ImageFormat.Png);
-            }
-            else
-            {
-                Directory.CreateDirectory(PathFolder);
-                print.Save(PathFolder +"\\"+ strunc1 + struck2 + struck3 + "_" + region + ".png", ImageFormat.Png);
-            }
 
-            print = new Bitmap(print, new Size( PixelWeightInSM(weight), PixelHeighInSM(height)));
-            Printer();
-        }
-
-        public void MakeLicense(string Name, string FullName, DateTime DateOfBrith, DateTime DateOfIssue, string Path)
+        public void MakeLicense(string FirstName, string FullName, DateTime DateOfBrith, DateTime Gets, string Series, string area, string Path)
         {
             PathFolder = Environment.CurrentDirectory;
             PathFolder += @"\HistoryLicense";
 
-            print = PP.photo(Name, FullName, DateOfBrith, DateOfIssue, Path);
+            print = PP.photo(FirstName, FullName, DateOfBrith,Gets,Series,area, Path);
         //    print.Save(Name + "_" + FullName + ".png", ImageFormat.Png);
 
-            if (Directory.Exists(PathFolder))
-            {
-                print.Save(PathFolder + "\\" + Name + "_" + FullName + ".png", ImageFormat.Png);
-            }
-            else
-            {
-                Directory.CreateDirectory(PathFolder);
-                print.Save(PathFolder + "\\" + Name + "_" + FullName + ".png", ImageFormat.Png);
-            }
+            //if (Directory.Exists(PathFolder))
+            //{
+            //    print.Save(PathFolder + "\\" + "_" + FullName + ".png", ImageFormat.Png);
+            //}
+            //else
+            //{
+            //    Directory.CreateDirectory(PathFolder);
+            //    print.Save(PathFolder + "\\" +  "_" + FullName + ".png", ImageFormat.Png);
+            //}
 
-            print = new Bitmap(print, new Size(PixelWeightInSM(19), PixelHeighInSM(14)));
-            Printer();
+            //print = new Bitmap(print, new Size(PixelWeightInSM(19), PixelHeighInSM(14)));
+      //      Printer();
         }
 
       

@@ -43,9 +43,7 @@ namespace Child_s_Programm
         {
             Country.SelectedIndex = 0;
             Fonts.SelectedIndex = 0;
-            DateOfBrith.SelectionStart = Convert.ToDateTime("02.02.2013");
-            DateOfBrith.SelectionEnd = Convert.ToDateTime("02.02.2013");
-
+       
         }
 
 
@@ -102,13 +100,16 @@ namespace Child_s_Programm
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            var gort = Convert.ToDateTime(Birh.Text);
+            //
+            MN.MakeLicense(FirstName.Text, FullName.Text, Convert.ToDateTime(Birh.Text), gort, Series.Text, Areas.Text, openFile.FileName);
             if (!String.IsNullOrEmpty(FirstName.Text) && !String.IsNullOrEmpty(FullName.Text) && openFile.FileName != null)
             {
                     // photo.photo(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
-                    MN.MakeLicense(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
+                  //  MN.MakeLicense(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
             }
             else
-                MessageBox.Show("Нельзя оставлять пустым имя, фамилию или фото!");
+                MessageBox.Show("Все поля должны быть заполнены!");
 
            
         }
@@ -133,7 +134,7 @@ namespace Child_s_Programm
 
         private void button3_Click(object sender, EventArgs e)
         {
-        
+            colorDialog1.ShowDialog();
 
         }
 

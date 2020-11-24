@@ -63,6 +63,16 @@ namespace License.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AllLicens {
+            get {
+                object obj = ResourceManager.GetObject("AllLicens", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flag_sRussia {
             get {
                 object obj = ResourceManager.GetObject("flag_sRussia", resourceCulture);

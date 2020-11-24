@@ -13,15 +13,15 @@ namespace License
    public class PhotoProccesing
     {
         private Bitmap Photo;
-        private Bitmap License= Properties.Resources.Права;
+        private Bitmap License= Properties.Resources.AllLicens;
         private Bitmap Result;
 
         private int SizeHeight = 457;
         private int SizeWeight = 350;
 
-        private int LSizeHeight = 879;
-        private int LSizeWeight = 1283;
-       public Bitmap photo(string Name,string FullName,DateTime DateOfBrith,DateTime DateOfIssue,string Path)
+        private int LSizeHeight = 1110;
+        private int LSizeWeight = 1442;
+       public Bitmap photo(string FirstName, string FullName, DateTime DateOfBrith, DateTime Gets, string Series, string area, string Path)
         {
             Photo = new Bitmap(Image.FromFile(Path));
             Photo =new Bitmap(Photo, new Size(SizeWeight, SizeHeight));
@@ -35,10 +35,10 @@ namespace License
             graphics.DrawImage(License, 0, 0);
             graphics.DrawImage(Photo, 23, 171, Photo.Width, Photo.Height);
             graphics.DrawString(FullName, new Font("Aria",34,FontStyle.Bold), new SolidBrush(Color.White),647, 220);
-            graphics.DrawString(Name, new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.White), 530, 310);
+            graphics.DrawString(FirstName, new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.White), 530, 310);
             graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.White), 450, 550);
-            graphics.DrawString(DateOfIssue.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.White), 900, 550);
 
+            Result.Save("buk.jpeg", ImageFormat.Jpeg);
             return Result;
         }
     }
