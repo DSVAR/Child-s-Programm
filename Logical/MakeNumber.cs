@@ -28,26 +28,29 @@ namespace Logical
 
 
 
-        public void MakeLicense(string FirstName, string FullName, DateTime DateOfBrith, DateTime Gets, string Series, string area, string Path)
+        public void MakeLicense(string FirstName, string FullName, DateTime DateOfBrith, DateTime Gets, string Series, string area,
+            string Path,List<string>CK)
         {
             PathFolder = Environment.CurrentDirectory;
             PathFolder += @"\HistoryLicense";
 
-            print = PP.photo(FirstName, FullName, DateOfBrith,Gets,Series,area, Path);
-        //    print.Save(Name + "_" + FullName + ".png", ImageFormat.Png);
+            print = PP.photo(FirstName, FullName, DateOfBrith,Gets,Series,area, Path, CK);
+            //    print.Save(Name + "_" + FullName + ".png", ImageFormat.Png);
 
-            //if (Directory.Exists(PathFolder))
-            //{
-            //    print.Save(PathFolder + "\\" + "_" + FullName + ".png", ImageFormat.Png);
-            //}
-            //else
-            //{
-            //    Directory.CreateDirectory(PathFolder);
-            //    print.Save(PathFolder + "\\" +  "_" + FullName + ".png", ImageFormat.Png);
-            //}
+            if (Directory.Exists(PathFolder))
+            {
+                print.Save(PathFolder + "\\" + "_" + FullName + ".png", ImageFormat.Png);
+            }
+            else
+            {
+                Directory.CreateDirectory(PathFolder);
+                print.Save(PathFolder + "\\" + "_" + FullName + ".png", ImageFormat.Png);
+            }
 
-            //print = new Bitmap(print, new Size(PixelWeightInSM(19), PixelHeighInSM(14)));
-      //      Printer();
+            print = new Bitmap(print, new Size(PixelWeightInSM(19), PixelHeighInSM(14)));
+            //5,5 высота
+            //ширина 8,5
+            Printer();
         }
 
       

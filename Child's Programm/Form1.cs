@@ -27,6 +27,8 @@ namespace Child_s_Programm
         Bitmap SelectedFlag;
         Bitmap Picture;
         OpenFileDialog openFile;
+        List<CheckBox> all = new List<CheckBox>();
+        List<string> CheckBoxTrue = new List<string>();
         public Form1()
         {
             InitializeComponent();
@@ -43,7 +45,15 @@ namespace Child_s_Programm
         {
             Country.SelectedIndex = 0;
             Fonts.SelectedIndex = 0;
-       
+            all.Clear();
+
+            all.Add(A);
+            all.Add(B);
+            all.Add(C);
+            all.Add(D);
+            all.Add(BE);
+            all.Add(CE);
+            all.Add(DE);
         }
 
 
@@ -100,9 +110,27 @@ namespace Child_s_Programm
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
+            CheckBoxTrue.Clear();
+            List<string> Checking = new List<string>();
+            foreach (CheckBox CB in all)
+            {
+                if (CB.Checked == true)
+                {
+                    CheckBoxTrue.Add(CB.Name);
+
+                }
+            }
             var gort = Convert.ToDateTime(Birh.Text);
-            //
-            MN.MakeLicense(FirstName.Text, FullName.Text, Convert.ToDateTime(Birh.Text), gort, Series.Text, Areas.Text, openFile.FileName);
+            try
+            {
+                if (FirstName.Text != null ||)
+                MN.MakeLicense(FirstName.Text, FullName.Text, Convert.ToDateTime(Birh.Text), gort, Series.Text, Areas.Text, openFile.FileName, CheckBoxTrue);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
             //if (!String.IsNullOrEmpty(FirstName.Text) && !String.IsNullOrEmpty(FullName.Text) && openFile.FileName != null)
             //{
             //        // photo.photo(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);

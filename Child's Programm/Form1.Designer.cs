@@ -32,7 +32,6 @@ namespace Child_s_Programm
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.License = new System.Windows.Forms.TabPage();
             this.Labl4B = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@ namespace Child_s_Programm
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.Areas = new System.Windows.Forms.TextBox();
             this.Series = new System.Windows.Forms.TextBox();
             this.Gets = new System.Windows.Forms.TextBox();
@@ -80,6 +78,13 @@ namespace Child_s_Programm
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.B = new System.Windows.Forms.CheckBox();
+            this.A = new System.Windows.Forms.CheckBox();
+            this.C = new System.Windows.Forms.CheckBox();
+            this.D = new System.Windows.Forms.CheckBox();
+            this.BE = new System.Windows.Forms.CheckBox();
+            this.CE = new System.Windows.Forms.CheckBox();
+            this.DE = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.License.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,8 +107,14 @@ namespace Child_s_Programm
             // 
             this.License.BackgroundImage = global::Child_s_Programm.Properties.Resources.License;
             this.License.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.License.Controls.Add(this.DE);
+            this.License.Controls.Add(this.CE);
+            this.License.Controls.Add(this.BE);
+            this.License.Controls.Add(this.D);
+            this.License.Controls.Add(this.C);
+            this.License.Controls.Add(this.A);
+            this.License.Controls.Add(this.B);
             this.License.Controls.Add(this.Labl4B);
-            this.License.Controls.Add(this.label20);
             this.License.Controls.Add(this.label19);
             this.License.Controls.Add(this.label18);
             this.License.Controls.Add(this.label17);
@@ -111,7 +122,6 @@ namespace Child_s_Programm
             this.License.Controls.Add(this.label15);
             this.License.Controls.Add(this.label14);
             this.License.Controls.Add(this.label13);
-            this.License.Controls.Add(this.textBox6);
             this.License.Controls.Add(this.Areas);
             this.License.Controls.Add(this.Series);
             this.License.Controls.Add(this.Gets);
@@ -139,16 +149,6 @@ namespace Child_s_Programm
             this.Labl4B.Size = new System.Drawing.Size(121, 18);
             this.Labl4B.TabIndex = 21;
             this.Labl4B.Text = "День получения";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(403, 335);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(80, 18);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "Категории";
             // 
             // label19
             // 
@@ -219,13 +219,6 @@ namespace Child_s_Programm
             this.label13.Size = new System.Drawing.Size(77, 18);
             this.label13.TabIndex = 13;
             this.label13.Text = "/Фамилия";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(228, 336);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(169, 20);
-            this.textBox6.TabIndex = 12;
             // 
             // Areas
             // 
@@ -633,6 +626,76 @@ namespace Child_s_Programm
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // B
+            // 
+            this.B.AutoSize = true;
+            this.B.Location = new System.Drawing.Point(273, 338);
+            this.B.Name = "B";
+            this.B.Size = new System.Drawing.Size(33, 17);
+            this.B.TabIndex = 22;
+            this.B.Text = "B";
+            this.B.UseVisualStyleBackColor = true;
+            // 
+            // A
+            // 
+            this.A.AutoSize = true;
+            this.A.Location = new System.Drawing.Point(234, 338);
+            this.A.Name = "A";
+            this.A.Size = new System.Drawing.Size(33, 17);
+            this.A.TabIndex = 23;
+            this.A.Text = "A";
+            this.A.UseVisualStyleBackColor = true;
+            // 
+            // C
+            // 
+            this.C.AutoSize = true;
+            this.C.Location = new System.Drawing.Point(312, 338);
+            this.C.Name = "C";
+            this.C.Size = new System.Drawing.Size(33, 17);
+            this.C.TabIndex = 24;
+            this.C.Text = "C";
+            this.C.UseVisualStyleBackColor = true;
+            // 
+            // D
+            // 
+            this.D.AutoSize = true;
+            this.D.Location = new System.Drawing.Point(342, 338);
+            this.D.Name = "D";
+            this.D.Size = new System.Drawing.Size(34, 17);
+            this.D.TabIndex = 25;
+            this.D.Text = "D";
+            this.D.UseVisualStyleBackColor = true;
+            // 
+            // BE
+            // 
+            this.BE.AutoSize = true;
+            this.BE.Location = new System.Drawing.Point(382, 338);
+            this.BE.Name = "BE";
+            this.BE.Size = new System.Drawing.Size(40, 17);
+            this.BE.TabIndex = 26;
+            this.BE.Text = "BE";
+            this.BE.UseVisualStyleBackColor = true;
+            // 
+            // CE
+            // 
+            this.CE.AutoSize = true;
+            this.CE.Location = new System.Drawing.Point(428, 338);
+            this.CE.Name = "CE";
+            this.CE.Size = new System.Drawing.Size(40, 17);
+            this.CE.TabIndex = 27;
+            this.CE.Text = "CE";
+            this.CE.UseVisualStyleBackColor = true;
+            // 
+            // DE
+            // 
+            this.DE.AutoSize = true;
+            this.DE.Location = new System.Drawing.Point(474, 338);
+            this.DE.Name = "DE";
+            this.DE.Size = new System.Drawing.Size(41, 17);
+            this.DE.TabIndex = 28;
+            this.DE.Text = "DE";
+            this.DE.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,7 +759,6 @@ namespace Child_s_Programm
         private System.Windows.Forms.DomainUpDown SizeOfText;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label Labl4B;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
@@ -704,11 +766,17 @@ namespace Child_s_Programm
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox Areas;
         private System.Windows.Forms.TextBox Series;
         private System.Windows.Forms.TextBox Gets;
         private System.Windows.Forms.TextBox Birh;
+        private System.Windows.Forms.CheckBox DE;
+        private System.Windows.Forms.CheckBox CE;
+        private System.Windows.Forms.CheckBox BE;
+        private System.Windows.Forms.CheckBox D;
+        private System.Windows.Forms.CheckBox C;
+        private System.Windows.Forms.CheckBox A;
+        private System.Windows.Forms.CheckBox B;
     }
 }
 
