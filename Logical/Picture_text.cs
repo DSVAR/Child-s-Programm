@@ -27,7 +27,7 @@ namespace Logical
             grap.DrawString(text, new Font(Font, size, FontStyle.Bold), new SolidBrush(ColorText),0,0);
             
             result.MakeTransparent(Color.White);
-            result.Save("Imp.png", ImageFormat.Png);
+          //  result.Save("Imp.png", ImageFormat.Png);
             return result;
         }
     }
