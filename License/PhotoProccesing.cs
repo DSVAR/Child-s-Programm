@@ -13,7 +13,7 @@ namespace License
    public class PhotoProccesing
     {
         private Bitmap Photo;
-        private Bitmap License= Properties.Resources.AllLicens;
+        private Bitmap License= Properties.Resources.AllLicens2;
         private Bitmap Result;
 
         private int SizeHeight = 470;
@@ -33,17 +33,17 @@ namespace License
             Graphics graphics = Graphics.FromImage(Result);
             graphics.CompositingMode = CompositingMode.SourceOver;
             graphics.DrawImage(License, 0, 0);
-            graphics.DrawImage(Photo, 120, 230, Photo.Width, Photo.Height);
-            graphics.DrawString(FullName.ToUpper(), new Font("Aria",34,FontStyle.Bold), new SolidBrush(Color.Black),700, 180);//2
-            graphics.DrawString(FirstName.ToUpper(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 700, 265);//1
+            graphics.DrawImage(Photo, 120, 240, Photo.Width, Photo.Height);
+            graphics.DrawString(FullName.ToUpper(), new Font("Aria",34,FontStyle.Bold), new SolidBrush(Color.Black),700, 187);//2
+            graphics.DrawString(FirstName.ToUpper(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 700, 267);//1
 
-            graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 700, 350);//3
-            graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 715, 470);//4a
-            graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 1255, 470);//4b
-            graphics.DrawString("ГИБДД", new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 715, 515);//4c
+            graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 700, 357);//3
+            graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 715, 477);//4a
+            graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 1255, 477);//4b
+            graphics.DrawString("ГИБДД", new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 715, 522);//4c
 
-            graphics.DrawString(Series.ToUpper(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 700, 590);//5
-            graphics.DrawString(area.ToUpper(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 700, 640);//8
+            graphics.DrawString(Series.ToUpper(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 700, 597);//5
+            graphics.DrawString(area.ToUpper(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 700, 647);//8
 
 
             Result.Save("buk.jpeg", ImageFormat.Jpeg);

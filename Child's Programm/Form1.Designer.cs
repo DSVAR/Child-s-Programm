@@ -288,7 +288,6 @@ namespace Child_s_Programm
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Child_s_Programm.Properties.Resources.flag_sRussia;
             this.pictureBox1.Location = new System.Drawing.Point(23, 82);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(161, 236);
