@@ -31,6 +31,13 @@ namespace Child_s_Programm
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.License = new System.Windows.Forms.TabPage();
+            this.DE = new System.Windows.Forms.CheckBox();
+            this.CE = new System.Windows.Forms.CheckBox();
+            this.BE = new System.Windows.Forms.CheckBox();
+            this.D = new System.Windows.Forms.CheckBox();
+            this.C = new System.Windows.Forms.CheckBox();
+            this.A = new System.Windows.Forms.CheckBox();
+            this.B = new System.Windows.Forms.CheckBox();
             this.Labl4B = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -78,19 +85,19 @@ namespace Child_s_Programm
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.B = new System.Windows.Forms.CheckBox();
-            this.A = new System.Windows.Forms.CheckBox();
-            this.C = new System.Windows.Forms.CheckBox();
-            this.D = new System.Windows.Forms.CheckBox();
-            this.BE = new System.Windows.Forms.CheckBox();
-            this.CE = new System.Windows.Forms.CheckBox();
-            this.DE = new System.Windows.Forms.CheckBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.Weigh1 = new System.Windows.Forms.NumericUpDown();
+            this.Heigh2 = new System.Windows.Forms.NumericUpDown();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.License.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Numbers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Weigh1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Heigh2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -107,6 +114,11 @@ namespace Child_s_Programm
             // 
             this.License.BackgroundImage = global::Child_s_Programm.Properties.Resources.License;
             this.License.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.License.Controls.Add(this.label22);
+            this.License.Controls.Add(this.label21);
+            this.License.Controls.Add(this.Heigh2);
+            this.License.Controls.Add(this.Weigh1);
+            this.License.Controls.Add(this.label20);
             this.License.Controls.Add(this.DE);
             this.License.Controls.Add(this.CE);
             this.License.Controls.Add(this.BE);
@@ -139,6 +151,76 @@ namespace Child_s_Programm
             this.License.Text = "Права";
             this.License.UseVisualStyleBackColor = true;
             this.License.Click += new System.EventHandler(this.License_Click);
+            // 
+            // DE
+            // 
+            this.DE.AutoSize = true;
+            this.DE.Location = new System.Drawing.Point(474, 338);
+            this.DE.Name = "DE";
+            this.DE.Size = new System.Drawing.Size(41, 17);
+            this.DE.TabIndex = 28;
+            this.DE.Text = "DE";
+            this.DE.UseVisualStyleBackColor = true;
+            // 
+            // CE
+            // 
+            this.CE.AutoSize = true;
+            this.CE.Location = new System.Drawing.Point(428, 338);
+            this.CE.Name = "CE";
+            this.CE.Size = new System.Drawing.Size(40, 17);
+            this.CE.TabIndex = 27;
+            this.CE.Text = "CE";
+            this.CE.UseVisualStyleBackColor = true;
+            // 
+            // BE
+            // 
+            this.BE.AutoSize = true;
+            this.BE.Location = new System.Drawing.Point(382, 338);
+            this.BE.Name = "BE";
+            this.BE.Size = new System.Drawing.Size(40, 17);
+            this.BE.TabIndex = 26;
+            this.BE.Text = "BE";
+            this.BE.UseVisualStyleBackColor = true;
+            // 
+            // D
+            // 
+            this.D.AutoSize = true;
+            this.D.Location = new System.Drawing.Point(342, 338);
+            this.D.Name = "D";
+            this.D.Size = new System.Drawing.Size(34, 17);
+            this.D.TabIndex = 25;
+            this.D.Text = "D";
+            this.D.UseVisualStyleBackColor = true;
+            // 
+            // C
+            // 
+            this.C.AutoSize = true;
+            this.C.Location = new System.Drawing.Point(312, 338);
+            this.C.Name = "C";
+            this.C.Size = new System.Drawing.Size(33, 17);
+            this.C.TabIndex = 24;
+            this.C.Text = "C";
+            this.C.UseVisualStyleBackColor = true;
+            // 
+            // A
+            // 
+            this.A.AutoSize = true;
+            this.A.Location = new System.Drawing.Point(234, 338);
+            this.A.Name = "A";
+            this.A.Size = new System.Drawing.Size(33, 17);
+            this.A.TabIndex = 23;
+            this.A.Text = "A";
+            this.A.UseVisualStyleBackColor = true;
+            // 
+            // B
+            // 
+            this.B.AutoSize = true;
+            this.B.Location = new System.Drawing.Point(273, 338);
+            this.B.Name = "B";
+            this.B.Size = new System.Drawing.Size(33, 17);
+            this.B.TabIndex = 22;
+            this.B.Text = "B";
+            this.B.UseVisualStyleBackColor = true;
             // 
             // Labl4B
             // 
@@ -226,7 +308,7 @@ namespace Child_s_Programm
             this.Areas.Name = "Areas";
             this.Areas.Size = new System.Drawing.Size(169, 20);
             this.Areas.TabIndex = 11;
-            this.Areas.Text = "13";
+            this.Areas.Text = "Псковская область";
             // 
             // Series
             // 
@@ -234,7 +316,7 @@ namespace Child_s_Programm
             this.Series.Name = "Series";
             this.Series.Size = new System.Drawing.Size(147, 20);
             this.Series.TabIndex = 10;
-            this.Series.Text = "25";
+            this.Series.Text = "1234567891";
             // 
             // Gets
             // 
@@ -626,75 +708,79 @@ namespace Child_s_Programm
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // B
+            // label20
             // 
-            this.B.AutoSize = true;
-            this.B.Location = new System.Drawing.Point(273, 338);
-            this.B.Name = "B";
-            this.B.Size = new System.Drawing.Size(33, 17);
-            this.B.TabIndex = 22;
-            this.B.Text = "B";
-            this.B.UseVisualStyleBackColor = true;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(78, 381);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(148, 18);
+            this.label20.TabIndex = 29;
+            this.label20.Text = "Размер распечатки:";
             // 
-            // A
+            // Weigh1
             // 
-            this.A.AutoSize = true;
-            this.A.Location = new System.Drawing.Point(234, 338);
-            this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(33, 17);
-            this.A.TabIndex = 23;
-            this.A.Text = "A";
-            this.A.UseVisualStyleBackColor = true;
+            this.Weigh1.Location = new System.Drawing.Point(291, 381);
+            this.Weigh1.Maximum = new decimal(new int[] {
+            21,
+            0,
+            0,
+            0});
+            this.Weigh1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Weigh1.Name = "Weigh1";
+            this.Weigh1.Size = new System.Drawing.Size(33, 20);
+            this.Weigh1.TabIndex = 30;
+            this.Weigh1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // C
+            // Heigh2
             // 
-            this.C.AutoSize = true;
-            this.C.Location = new System.Drawing.Point(312, 338);
-            this.C.Name = "C";
-            this.C.Size = new System.Drawing.Size(33, 17);
-            this.C.TabIndex = 24;
-            this.C.Text = "C";
-            this.C.UseVisualStyleBackColor = true;
+            this.Heigh2.Location = new System.Drawing.Point(364, 379);
+            this.Heigh2.Maximum = new decimal(new int[] {
+            29,
+            0,
+            0,
+            0});
+            this.Heigh2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Heigh2.Name = "Heigh2";
+            this.Heigh2.Size = new System.Drawing.Size(33, 20);
+            this.Heigh2.TabIndex = 31;
+            this.Heigh2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // D
+            // label21
             // 
-            this.D.AutoSize = true;
-            this.D.Location = new System.Drawing.Point(342, 338);
-            this.D.Name = "D";
-            this.D.Size = new System.Drawing.Size(34, 17);
-            this.D.TabIndex = 25;
-            this.D.Text = "D";
-            this.D.UseVisualStyleBackColor = true;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(182, 357);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(124, 18);
+            this.label21.TabIndex = 32;
+            this.label21.Text = "Ширина макс 21:";
             // 
-            // BE
+            // label22
             // 
-            this.BE.AutoSize = true;
-            this.BE.Location = new System.Drawing.Point(382, 338);
-            this.BE.Name = "BE";
-            this.BE.Size = new System.Drawing.Size(40, 17);
-            this.BE.TabIndex = 26;
-            this.BE.Text = "BE";
-            this.BE.UseVisualStyleBackColor = true;
-            // 
-            // CE
-            // 
-            this.CE.AutoSize = true;
-            this.CE.Location = new System.Drawing.Point(428, 338);
-            this.CE.Name = "CE";
-            this.CE.Size = new System.Drawing.Size(40, 17);
-            this.CE.TabIndex = 27;
-            this.CE.Text = "CE";
-            this.CE.UseVisualStyleBackColor = true;
-            // 
-            // DE
-            // 
-            this.DE.AutoSize = true;
-            this.DE.Location = new System.Drawing.Point(474, 338);
-            this.DE.Name = "DE";
-            this.DE.Size = new System.Drawing.Size(41, 17);
-            this.DE.TabIndex = 28;
-            this.DE.Text = "DE";
-            this.DE.UseVisualStyleBackColor = true;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(374, 358);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(124, 18);
+            this.label22.TabIndex = 33;
+            this.label22.Text = "Высота макс 29:";
             // 
             // Form1
             // 
@@ -715,6 +801,8 @@ namespace Child_s_Programm
             this.Numbers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Weigh1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Heigh2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -777,6 +865,11 @@ namespace Child_s_Programm
         private System.Windows.Forms.CheckBox C;
         private System.Windows.Forms.CheckBox A;
         private System.Windows.Forms.CheckBox B;
+        private System.Windows.Forms.NumericUpDown Heigh2;
+        private System.Windows.Forms.NumericUpDown Weigh1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
     }
 }
 

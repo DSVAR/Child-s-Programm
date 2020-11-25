@@ -29,6 +29,7 @@ namespace Child_s_Programm
         OpenFileDialog openFile;
         List<CheckBox> all = new List<CheckBox>();
         List<string> CheckBoxTrue = new List<string>();
+        DateTime fullLicense;
         public Form1()
         {
             InitializeComponent();
@@ -59,9 +60,7 @@ namespace Child_s_Programm
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            //MN.Numbers(Struct1.Text, Struct2.Text, Struck3.Text, Regions.Text, Country.Text, Fonts.Text,
-            //    SelectedFlag, float.Parse(Weights.Text), float.Parse(Heights.Text), Struct1.ForeColor);
+            try { 
 
             Size Sizes = License.Size-new Size(100,230);
             
@@ -72,8 +71,12 @@ namespace Child_s_Programm
             g.CopyFromScreen(License.PointToScreen(Point.Empty), Point.Empty, Sizes);
             // bitmap.Save("lulu.png", ImageFormat.Png);
             MN.JustPrint(bitmap, float.Parse(Weights.Text), float.Parse(Heights.Text));
-          //  MN.Just_Print(bitmap, 300f, 300f);
-
+                //  MN.Just_Print(bitmap, 300f, 300f);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -121,24 +124,31 @@ namespace Child_s_Programm
 
                 }
             }
-            var gort = Convert.ToDateTime(Birh.Text);
+            
             try
             {
-                if (FirstName.Text != null ||)
-                MN.MakeLicense(FirstName.Text, FullName.Text, Convert.ToDateTime(Birh.Text), gort, Series.Text, Areas.Text, openFile.FileName, CheckBoxTrue);
+                if (FirstName.Text != null && FullName.Text!=null &&  Birh.Text!=null  && Series.Text!=null && Areas.Text != null && openFile.FileName != null) { 
+                    if(Series.Text.Length>10 || Series.Text.Length < 10) {
+                        MessageBox.Show("/Серия превышает 10 символов или наоборот");
+                        label18.Text = Series.Text.Length.ToString();
+                    }
+                    else
+                    {
+                        fullLicense = Convert.ToDateTime(Birh.Text);
+                        fullLicense.AddYears(10);
+                    MN.MakeLicense(FirstName.Text, FullName.Text, Convert.ToDateTime(Birh.Text), fullLicense, Series.Text, Areas.Text, openFile.FileName, CheckBoxTrue,Heigh2.Value,Weigh1.Value);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("одно из полей не заполнено или не выбрана фотография");
+                }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
-            //if (!String.IsNullOrEmpty(FirstName.Text) && !String.IsNullOrEmpty(FullName.Text) && openFile.FileName != null)
-            //{
-            //        // photo.photo(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
-            //      //  MN.MakeLicense(FirstName.Text, FullName.Text, DateOfBrith.SelectionStart, DateOfIssue.TodayDate, openFile.FileName);
-            //}
-            //else
-            //    MessageBox.Show("Все поля должны быть заполнены!");
-
+         
            
         }
 

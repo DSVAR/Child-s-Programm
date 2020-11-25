@@ -45,7 +45,7 @@ namespace License
 
             graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 720, 357);//3
             graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 720, 477);//4a
-            graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 1255, 477);//4b
+            graphics.DrawString(Gets.ToShortDateString(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 1265, 477);//4b
             graphics.DrawString("ГИБДД", new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 720, 522);//4c
 
             graphics.DrawString(Series.ToUpper(), new Font("Aria", 34, FontStyle.Bold), new SolidBrush(Color.Black), 720, 597);//5

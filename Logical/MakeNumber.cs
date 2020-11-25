@@ -29,7 +29,7 @@ namespace Logical
 
 
         public void MakeLicense(string FirstName, string FullName, DateTime DateOfBrith, DateTime Gets, string Series, string area,
-            string Path,List<string>CK)
+            string Path,List<string>CK,decimal heigh,decimal weigh)
         {
             PathFolder = Environment.CurrentDirectory;
             PathFolder += @"\HistoryLicense";
@@ -47,7 +47,7 @@ namespace Logical
                 print.Save(PathFolder + "\\" + "_" + FullName + ".png", ImageFormat.Png);
             }
 
-            print = new Bitmap(print, new Size(PixelWeightInSM(19), PixelHeighInSM(14)));
+            print = new Bitmap(print, new Size(PixelWeightInSM(float.Parse(weigh.ToString())), PixelHeighInSM(float.Parse(heigh.ToString()) )));
             //5,5 высота
             //ширина 8,5
             Printer();
