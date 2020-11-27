@@ -136,7 +136,7 @@ namespace Child_s_Programm
                     {
                         fullLicense = Convert.ToDateTime(Birh.Text);
                         fullLicense.AddYears(10);
-                    MN.MakeLicense(FirstName.Text, FullName.Text, Convert.ToDateTime(Birh.Text), fullLicense, Series.Text, Areas.Text, openFile.FileName, CheckBoxTrue,Heigh2.Value,Weigh1.Value);
+                  //  MN.MakeLicense(FirstName.Text, FullName.Text, Convert.ToDateTime(Birh.Text), fullLicense, Series.Text, Areas.Text, openFile.FileName, CheckBoxTrue,Heigh2.Value,Weigh1.Value);
                     }
                 }
                 else
@@ -197,8 +197,9 @@ namespace Child_s_Programm
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            Bitmap text=PT.Converts(TextF.Text,colorDialog1.Color,Fonts.Text,Convert.ToInt32(SizeOfText.Text),Convert.ToInt32(Heigh.Text), Convert.ToInt32(All.Text));
+           // Bitmap text=PT.Converts(TextF.Text,colorDialog1.Color,Fonts.Text,Convert.ToInt32(SizeOfText.Text),Convert.ToInt32(Heigh.Text), Convert.ToInt32(All.Text));
             //            pork(text);
+            Bitmap text = PT.pb(TextF.Text, colorDialog1.Color, Fonts.Text, Convert.ToInt32(SizeOfText.Text), Convert.ToInt32(Heigh.Text), Convert.ToInt32(All.Text));
             APB.AddPB(text, panel1, Convert.ToInt32(All.Text), Convert.ToInt32(Heigh.Text));
         }
 

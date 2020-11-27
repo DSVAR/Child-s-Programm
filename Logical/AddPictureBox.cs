@@ -26,6 +26,7 @@ namespace Logical
             PB.Size = new Size(All,Heigh);
 
             PB.Name = "PB" + i.ToString();
+            //PB.BringToFront();
 
             PB.MouseDown += new MouseEventHandler(TMouseDown);
             PB.MouseUp += new MouseEventHandler(TMouseUp);
@@ -33,6 +34,7 @@ namespace Logical
             PB.MouseClick += new MouseEventHandler(TMouse_click);
 
             panel1.Controls.Add(PB);
+            PB.BringToFront();
             PBCollection[i] = PB;
             i++;
         }
