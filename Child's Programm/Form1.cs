@@ -29,7 +29,7 @@ namespace Child_s_Programm
         OpenFileDialog openFile;
         List<CheckBox> all = new List<CheckBox>();
         List<string> CheckBoxTrue = new List<string>();
-        DateTime fullLicense;
+        DateTime fullLicense=new DateTime();
         public Form1()
         {
             InitializeComponent();
@@ -135,7 +135,7 @@ namespace Child_s_Programm
                     else
                     {
                         fullLicense = Convert.ToDateTime(Birh.Text);
-                        fullLicense.AddYears(10);
+                        fullLicense= fullLicense.AddYears(10);
                     MN.MakeLicense(FirstName.Text, FullName.Text, Convert.ToDateTime(Birh.Text), fullLicense, Series.Text, Areas.Text, openFile.FileName, CheckBoxTrue,Heigh2.Value,Weigh1.Value);
                     }
                 }

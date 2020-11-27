@@ -61,40 +61,40 @@ namespace License
                 if (names == "A")
                 {
                     graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 750, 1090);//a1
-                    graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1090);//a2
+                    graphics.DrawString(Gets.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1090);//a2
                 }
                 if (names == "B")
                 {
                     graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 750, 1140);//b1
-                    graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1140);//b2
+                    graphics.DrawString(Gets.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1140);//b2
                 }
                 if (names == "C")
                 {
                     graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 750, 1190);//c1
-                    graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1190);//c2
+                    graphics.DrawString(Gets.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1190);//c2
 
                 }
                 if (names == "D")
                 {
                     graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 750, 1245);//d1
-                    graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1245);//d2
+                    graphics.DrawString(Gets.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1245);//d2
 
                 }
                 if (names == "BE")
                 {
                     graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 750, 1300);//BE1
-                    graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1300);//BE2
+                    graphics.DrawString(Gets.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1300);//BE2
 
                 }
                 if (names == "CE")
                 {
                     graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 750, 1350);//CE1
-                    graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1350);//CE2
+                    graphics.DrawString(Gets.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1350);//CE2
                 }
                 if (names == "DE")
                 {
                     graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 750, 1400);//DE1
-                    graphics.DrawString(DateOfBrith.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1400);//E2
+                    graphics.DrawString(Gets.ToShortDateString(), new Font("Aria", 28, FontStyle.Bold), new SolidBrush(Color.Black), 1000, 1400);//E2
                 }
             }
 
