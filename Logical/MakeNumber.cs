@@ -82,6 +82,7 @@ namespace Logical
             printDialog.Document = PD;
             if (printDialog.ShowDialog() == DialogResult.OK)
                 PD.Print();
+            PD.Dispose();
         }
 
         void Printing(object sender, PrintPageEventArgs e)

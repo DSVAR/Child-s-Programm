@@ -33,6 +33,7 @@ namespace Logical
             PB.MouseClick += new MouseEventHandler(TMouse_click);
 
             panel1.Controls.Add(PB);
+            PB.BringToFront();
             PBCollection[i] = PB;
             i++;
         }

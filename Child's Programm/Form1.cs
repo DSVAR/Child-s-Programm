@@ -18,15 +18,14 @@ namespace Child_s_Programm
     public partial class Form1 : Form
     {
 
-        private PhotoProccesing photo = new PhotoProccesing();
-        private NumberForCar Number = new NumberForCar();
+        
         private MakeNumber MN = new MakeNumber();
         private Picture_text PT = new Picture_text();
         private AddPictureBox APB = new AddPictureBox();
 
         Bitmap SelectedFlag;
         Bitmap Picture;
-        OpenFileDialog openFile;
+        OpenFileDialog openFile=new OpenFileDialog();
         List<CheckBox> all = new List<CheckBox>();
         List<string> CheckBoxTrue = new List<string>();
         DateTime fullLicense=new DateTime();
@@ -115,7 +114,6 @@ namespace Child_s_Programm
         {
 
             CheckBoxTrue.Clear();
-            List<string> Checking = new List<string>();
             foreach (CheckBox CB in all)
             {
                 if (CB.Checked == true)
@@ -137,6 +135,7 @@ namespace Child_s_Programm
                         fullLicense = Convert.ToDateTime(Birh.Text);
                         fullLicense= fullLicense.AddYears(10);
                     MN.MakeLicense(FirstName.Text, FullName.Text, Convert.ToDateTime(Birh.Text), fullLicense, Series.Text, Areas.Text, openFile.FileName, CheckBoxTrue,Heigh2.Value,Weigh1.Value);
+                
                     }
                 }
                 else
@@ -159,12 +158,17 @@ namespace Child_s_Programm
 
             openFile.Filter = "Файлы изображения | *.bmp;*.png;*jpg;";
             if (openFile.ShowDialog() == DialogResult.Cancel)
+            {
                 return;
+                openFile.Dispose();
+            }
 
             if (openFile.FileName != null)
             {
                 pictureBox1.Image = Image.FromFile(openFile.FileName);
+
             }
+            openFile.Dispose();
 
         }
 
@@ -185,21 +189,25 @@ namespace Child_s_Programm
 
             openFile.Filter = "Файлы изображения | *.bmp;*.png;*jpg;";
             if (openFile.ShowDialog() == DialogResult.Cancel)
+            {
                 return;
+                openFile.Dispose();
+            }
 
             if (openFile.FileName != null)
             {
                 Picture = (Bitmap)Image.FromFile(openFile.FileName);
                 APB.AddPB(Picture, panel1, Convert.ToInt32(All.Text), Convert.ToInt32(Heigh.Text));
             }
+            openFile.Dispose();
         }
 
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-           // Bitmap text=PT.Converts(TextF.Text,colorDialog1.Color,Fonts.Text,Convert.ToInt32(SizeOfText.Text),Convert.ToInt32(Heigh.Text), Convert.ToInt32(All.Text));
+          // Bitmap text=PT.Converts(TextF.Text,colorDialog1.Color,Fonts.Text,Convert.ToInt32(SizeOfText.Text),Convert.ToInt32(Heigh.Text), Convert.ToInt32(All.Text));
             //            pork(text);
-            Bitmap text = PT.pb(TextF.Text, colorDialog1.Color, Fonts.Text, Convert.ToInt32(SizeOfText.Text), Convert.ToInt32(Heigh.Text), Convert.ToInt32(All.Text));
+           Bitmap text = PT.pb(TextF.Text, colorDialog1.Color, Fonts.Text, Convert.ToInt32(SizeOfText.Text), Convert.ToInt32(Heigh.Text), Convert.ToInt32(All.Text));
             APB.AddPB(text, panel1, Convert.ToInt32(All.Text), Convert.ToInt32(Heigh.Text));
         }
 
